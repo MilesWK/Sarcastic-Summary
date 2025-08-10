@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sarcastic Summary: AI Website Summaries</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Sarcastic Summary</h1>
+    <p class="subheader">Get your website analyzed by a sarcastic AI</p>
+    <div class="form">
+      <input id="msg" placeholder="https://..." type="url" required/>
+      <button  onclick="sendMessage()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" >
+          <path id="send" d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/>
+          <path id="check" d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="loadercontainer">
+      <div id="loader" class="loader hidden"></div>
+      <div id="loader2" class="loader hidden"></div>
+      <div id="loader3" class="loader hidden"></div>
+    </div>      <p class='hidden' id="errmsg">Please enter a valid URL.</p>
+
+    <p id="result">...</p>
+    <p id="copyright"> &copy; 2025, <a href="mileswk.com">MilesWK</a>. All Rights Reserved. Code under MIT License</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
