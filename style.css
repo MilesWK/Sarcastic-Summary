@@ -24,6 +24,11 @@ body {
     text-align: center;
 }
 
+.buttoncontainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 h1 {
     font-family: sans-serif;
     text-align: center;
@@ -51,6 +56,7 @@ button {
     border-radius: 10px;
     border: 2px black solid;
     background-color: white;
+    cursor: pointer
 }
 
 #check{
@@ -99,4 +105,8 @@ button svg {
     font-size: 16px;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+#result a {
+    color: blue;
 }
