@@ -29,7 +29,7 @@ sendMessage = async function() {
     const loader3 = document.getElementById("loader3")
     const errorMessage = document.getElementById("errmsg")
     
-
+    const sharebutton = document.getElementById("shareable")
     const message = document.getElementById('msg').value;
     if (message === "" || message === " " || !message.includes("http")) {
       errorMessage.classList.remove('hidden');
@@ -44,7 +44,7 @@ sendMessage = async function() {
     const data = await res.json();
     console.log(data)
     document.getElementById('result').innerHTML = data.result;
-
+    sharebutton.classList.remove('hidden')
     loader.classList.toggle('hidden');
     loader2.classList.toggle('hidden');
     loader3.classList.toggle('hidden');}
@@ -53,5 +53,19 @@ sendMessage = async function() {
 
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(DrawSVGPlugin,MorphSVGPlugin)
-  // gsap code here!
  });
+
+share = function() {
+   const target = document.getElementById("result");
+
+  html2canvas(target).then(canvas => {
+      // Turn canvas into image
+      const dataURL = canvas.toDataURL("image/png");
+
+      // Create a download link
+      const link = document.createElement("a");
+      link.href = dataURL;
+      link.download = "sarcasticsummary.png";
+      link.click();
+  });
+}
