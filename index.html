@@ -3,7 +3,6 @@
 <head>
   <title>Sarcastic Summary: AI Website Summaries</title>
   <link href="style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
 </head>
 <body>
   <div class="container">
@@ -26,15 +25,17 @@
     </div>      <p class='hidden' id="errmsg">Please enter a valid URL.</p>
 
     <p id="result">...</p>
-    <p id="copyright">&copy; 2025, <a href="mileswk.com">MilesWK</a>. All Rights Reserved. Code under MIT License</p>
-    <p id="copyright">Any information on this website is meant to be funny, and not to be taken seriously. </p>
+    <div class="buttoncontainer">
+      <button id="shareable" class="hidden" onclick="share()">Share My Result</button>
+    </div>
+
+      <p id="copyright"> &copy; 2025, <a style="color:blue" href="mileswk.com">MilesWK</a>. All Rights Reserved. Code under MIT License</p>
+      <p id="copyright">Any information on this website is meant to be funny, and not to be taken seriously.</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-
